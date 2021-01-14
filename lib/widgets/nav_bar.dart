@@ -9,6 +9,8 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedItemColor: Colors.black,
+      backgroundColor: Color.fromRGBO(243, 201, 158, 1),
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
