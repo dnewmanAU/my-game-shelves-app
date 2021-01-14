@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_game_shelves_app/widgets/nav_bar.dart';
 
 class Shelves extends StatelessWidget {
   @override
@@ -12,6 +13,7 @@ class Shelves extends StatelessWidget {
               style: TextStyle(fontSize: 48),
             ),
           ),
+          bottomNavigationBar: NavBar(),
         ),
       ),
     );
