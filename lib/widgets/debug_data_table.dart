@@ -8,29 +8,24 @@ class DebugDataTable extends StatelessWidget {
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       child: DataTable(
-        sortColumnIndex: 1,
-        sortAscending: true,
-        columns: const <DataColumn>[
-          DataColumn(
-            label: Text("Title")
-          ),
-          DataColumn(
-              label: Text("Number")
-          ),
-          DataColumn(
-              label: Text("Type")
-          ),
-        ],
-        rows: list.map((item) =>
-            DataRow(
-              cells: [
-                DataCell(Text('Title $item')),
-                DataCell(Text('$item')),
-                DataCell(Text(item % 2 == 0 ? 'Even' : 'Odd')),
-              ],
-            )
-        ).toList()
-      ),
+          sortColumnIndex: 1,
+          sortAscending: true,
+          columns: const <DataColumn>[
+            DataColumn(label: Text("Title")),
+            DataColumn(label: Text("Number")),
+            DataColumn(label: Text("Type")),
+            DataColumn(label: Text("test")),
+          ],
+          rows: list
+              .map((item) => DataRow(
+                    cells: [
+                      DataCell(Text('Title $item')),
+                      DataCell(Text('$item')),
+                      DataCell(Text(item % 2 == 0 ? 'Even' : 'Odd')),
+                      DataCell(Text('test'))
+                    ],
+                  ))
+              .toList()),
     );
   }
 }
